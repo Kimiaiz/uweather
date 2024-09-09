@@ -18,7 +18,7 @@ const Page: PageEl = (props, state, refresh, getProps) => {
       <br-x />
       <Window title={"ShirazWeather"} 
       style={{ minHeight: 280, margin: 10, width: "calc(100% - 20px)",
-        backgroundImage:'url("https://irmapserver.ir/research/4/cloud1.jpg")'
+        backgroundImage:'url("https://cdn.ituring.ir/research/4/cloud1.jpg")'
        }}>
         {/* <pre style={{ direction: "ltr" }}>{JSON.stringify(props.data.current_condition[0].FeelsLikeC, null, 2)}</pre> */}
 
@@ -29,29 +29,22 @@ const Page: PageEl = (props, state, refresh, getProps) => {
 
           <br-xx/>
           <br-xx/>
-          <br-xx/>
-          <br-xx/>
-          <br-xx/>
-          <br-xx/>
-          <br-xx/>
-          <br-xx/>
-          <br-xx/>
-          <br-xx/>
-          <br-xx/>
-          <br-xx/>
+
+          <f-18>Weather:</f-18>
+
 
 
           <f-cse>
 
             <f-cc style={{height:80, width:300, backgroundColor:"white", borderRadius:5}}>
-            <img src='https://irmapserver.ir/research/4/temp.webp'
+            <img src='https://cdn.ituring.ir/research/4/temp.jpg'
           style={{ height: 30, objectFit: "contain" }} />
           <span>FeelsLike:{props.feelslikec} °C</span>
 
             </f-cc>
 
             <f-cc style={{height:80, width:300, backgroundColor:"white", borderRadius:5}}>
-            <img src='https://irmapserver.ir/research/4/dropp.jpg'
+            <img src='https://cdn.ituring.ir/research/4/dropp.jpg'
           style={{ height: 30, objectFit: "contain" }} />
           <span>Humidity:{props.humidity} %RH</span>
 
@@ -60,55 +53,11 @@ const Page: PageEl = (props, state, refresh, getProps) => {
           </f-cse>
 
           <br-xx/>
-
-
-          {/* <f-cse>
-
-            <f-cc style={{height:80, width:300, backgroundColor:"white", borderRadius:5}}>
-            <img src='https://irmapserver.ir/research/4/temp.webp'
-          style={{ height: 30, objectFit: "contain" }} />
-          <span>FeelsLike:{props.feelslikec} °C</span>
-
-            </f-cc>
-
-            <f-cc style={{height:80, width:300, backgroundColor:"white", borderRadius:5}}>
-            <img src='https://irmapserver.ir/research/4/temp.webp'
-          style={{ height: 30, objectFit: "contain" }} />
-          <span>FeelsLike:{props.feelslikec} °C</span>
-
-            </f-cc>
-
-          </f-cse> */}
           <br-xx/>
 
-          {/* <f-cse>
+          <f-cse style={{width:"100%",}}>
 
-            <f-cc style={{height:80, width:300, backgroundColor:"white", borderRadius:5}}>
-            <img src='https://irmapserver.ir/research/4/temp.webp'
-          style={{ height: 30, objectFit: "contain" }} />
-          <span>FeelsLike:{props.feelslikec} °C</span>
-
-            </f-cc>
-
-            <f-cc style={{height:80, width:300, backgroundColor:"white", borderRadius:5}}>
-            <img src='https://irmapserver.ir/research/4/temp.webp'
-          style={{ height: 30, objectFit: "contain" }} />
-          <span>FeelsLike:{props.feelslikec} °C</span>
-
-            </f-cc>
-
-          </f-cse> */}
-          <br-xx/>
-
-          <f-cc style={{width:"100%",}}>
-
-            <f-13>
-          <br-xx/>
-          <br-xx/>
-          <br-xx/>
-          <br-xx/>
-          <br-xx/>
-          <br-xx/>
+            <f-16 style={{color:"black"}}>
           <br-x/>
           <br-x/>
           <br-x/>
@@ -117,19 +66,23 @@ const Page: PageEl = (props, state, refresh, getProps) => {
           <br-x/>
           <br-x/>
           <br-x/>
+          <br-x/>
+          <br-x/>
+          <br-x/>
+          <br-x/>
+          <br-x/>
+          <br-x/>
+          
 
 
         prepared by the 127 research team
 
-            </f-13>
+            </f-16>
 
-          </f-cc>
+          </f-cse>
 
 
 
-          <f-csb></f-csb>
-
-          <f-csb></f-csb>
 
         </c-x>
         
@@ -137,15 +90,7 @@ const Page: PageEl = (props, state, refresh, getProps) => {
         
         
         
-        {/* <div style={{ direction: "ltr", fontSize: 18 }}>
 
-          <span>Feels Like: {props.feelslikec} °C</span>
-          <br />
-          <span>Humidity: {props.humidity} % RH</span>
-          <br />
-          <span>Pressure: {props.pressure} atm</span>
-          <br />
-        </div> */}
 
       </Window>
     </div>
@@ -162,7 +107,7 @@ export async function getServerSideProps(context) {
     usedquota, quota, quotaunit, status, regdate, expid,
     role, path, devmod, userip, } = session;
 
-  let data = await (await fetch("https://irmapserver.ir/research/api/weather")).json()
+  let data = await (await fetch("https://cdn.ituring.ir/research/api/weather")).json()
 
   let feelslikec = data.current_condition[0].FeelsLikeC
   let humidity = data.current_condition[0].humidity
